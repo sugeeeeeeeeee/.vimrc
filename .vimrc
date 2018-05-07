@@ -25,7 +25,7 @@ set showcmd
 set visualbell
 set showmatch
 " ステータスラインを常に表示
-set laststatus=2
+set laststatus=1
 " コマンドラインの補完
 set wildmode=list:longest
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
@@ -157,6 +157,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " vim-airline-themesが必要
 let g:airline_theme='behelit'
-set laststatus=2
 
 colorscheme molokai
