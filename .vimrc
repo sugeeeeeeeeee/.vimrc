@@ -40,6 +40,9 @@ set showmatch
 source $VIMRUNTIME/macros/matchit.vim
 " タブをスペース4つに変換
 set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
 
 " クリップボードからペーストする時だけインデントしないようにする。
 if &term =~ "xterm"
