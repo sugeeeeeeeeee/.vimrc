@@ -38,6 +38,8 @@ set smartcase
 set showmatch
 " Vimの「%」を拡張する
 source $VIMRUNTIME/macros/matchit.vim
+" タブをスペース4つに変換
+set tabstop=4
 
 " クリップボードからペーストする時だけインデントしないようにする。
 if &term =~ "xterm"
