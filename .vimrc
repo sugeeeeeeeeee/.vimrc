@@ -43,6 +43,10 @@ set tabstop=2
 set autoindent
 set expandtab
 set shiftwidth=2
+" クリップボードにコピーできるようにする
+set clipboard+=unnamed
+" バックスペースキーが使えるようにする
+set backspace=indent,eol,start
 
 " クリップボードからペーストする時だけインデントしないようにする。
 if &term =~ "xterm"
