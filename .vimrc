@@ -50,16 +50,16 @@ set backspace=2
 
 " クリップボードからペーストする時だけインデントしないようにする。
 if &term =~ "xterm"
-    let &t_SI .= "\e[?2004h"
-    let &t_EI .= "\e[?2004l"
-    let &pastetoggle = "\e[201~"
+  let &t_SI .= "\e[?2004h"
+  let &t_EI .= "\e[?2004l"
+  let &pastetoggle = "\e[201~"
 
-    function XTermPasteBegin(ret)
-        set paste
-        return a:ret
-    endfunction
+  function XTermPasteBegin(ret)
+    set paste
+    return a:ret
+  endfunction
 
-    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+  inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
 " マウスでカーソル移動やスクロール移動が出来るようになります。
@@ -140,7 +140,7 @@ let g:ctrlp_extensions = ['funky', 'commandline'] " CtrlPの拡張として「fu
 command! CtrlPCommandLine call ctrlp#init(ctrlp#commandline#id())
 
 " CtrlPFunkyの有効化
-let g:ctrlp_funky_matchtype = 'path' 
+let g:ctrlp_funky_matchtype = 'path'
 
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'fatih/vim-go'
@@ -149,14 +149,13 @@ NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
-" NeoBundle 'mattn/benchvimrc-vim'
+NeoBundle 'mattn/benchvimrc-vim'
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
 NeoBundleCheck
 call neobundle#end()
 filetype plugin indent on
 set t_Co=256
-"set spell
-"set spelllang=en,cjk
+set spell
 set background=dark
 syntax on
 let g:go_version_warning = 0
@@ -167,4 +166,6 @@ let g:airline_powerline_fonts = 1
 " vim-airline-themesが必要
 let g:airline_theme='behelit'
 
-colorscheme molokai
+" カラースキーマを設定
+syntax on
+colorscheme iceberg
