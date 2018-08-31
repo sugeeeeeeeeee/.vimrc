@@ -18,10 +18,10 @@ set autoread
 " バッファが編集中でもその他のファイルを開けるように
 set hidden
 set showcmd
-" set number
-" set cursorline
-" set cursorcolumn
-" set smartindent
+set number
+set cursorline
+set cursorcolumn
+set smartindent
 set visualbell
 set showmatch
 " ステータスラインを常に表示
@@ -46,7 +46,7 @@ set shiftwidth=2
 " クリップボードにコピーできるようにする
 set clipboard+=unnamed
 " バックスペースキーが使えるようにする
-set backspace=indent,eol,start
+set backspace=2
 
 " クリップボードからペーストする時だけインデントしないようにする。
 if &term =~ "xterm"
